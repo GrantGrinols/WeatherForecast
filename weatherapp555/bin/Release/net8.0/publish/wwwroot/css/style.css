@@ -1,0 +1,15 @@
+.WelcomeText{
+    text-align: center;
+    font-size: 3rem;
+}
+.TransBackground{
+    background-color: rgba(0, 0, 255, 0.6);
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-bottom: 2rem;
+}
+.Disclaimer{
+font-size: 5px;
+text-align: center;
+}

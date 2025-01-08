@@ -1,0 +1,8 @@
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\weatherapp555.exe
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\appsettings.json
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\weatherapp555.dll
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\weatherapp555.deps.json
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\weatherapp555.runtimeconfig.json
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\weatherapp555.pdb
+C:\Users\Apex Gaming PCs\Documents\VSCode\WeatherApp\weatherapp555\bin\Release\net8.0\publish\Newtonsoft.Json.dll

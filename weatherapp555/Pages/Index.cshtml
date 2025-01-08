@@ -1,0 +1,65 @@
+﻿@page
+@model IndexModel
+
+
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Weather App by Grant Grinols</title>
+
+<link rel="stylesheet" href="~/css/user.css" type="text/css"/>
+
+</head><body>
+    <div class="TransBackground WelcomeText">Welcome to your Weather forecast for Michigan</div>
+    <div class="TransBackground WelcomeText">Here is your local broadcast for @Model.Location
+       
+        <div style="display:flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+            @if(Model.Cards.Count!= 0){
+        @foreach (var card in Model.Cards){
+            <div style="font-size: 12px; border: 1px solid #ccc; border-radius: 8px; width:300px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); height: 200px;">
+                <p>Date: @card.Date</p>
+                <p>Description: @card.Description</p>
+                <p>Max Temp: @card.TempMax</p>
+                <p>Min Temp: @card.TempMin</p>
+                <p>Humidity: @card.Humidity</p>
+                @if(card.Description.Contains("lightning")||card.Description.Contains("Lightning")){
+                    <img src="image/thunder.png" alt="An image of a cloud" width="50" height="50">
+                }
+                @if(card.Description.Contains("snow")||card.Description.Contains("Snow")){
+                    <img src="image/snowcloud.png" alt="An image of a cloud" width="50" height="50">
+                }
+                @if(card.Description.Contains("rain")||card.Description.Contains("Rain")){
+                    <img src="image/raincloud.png" alt="An image of a cloud" width="50" height="50">
+                }
+                @if(card.Description.Contains("mix")||card.Description.Contains("Mix")){
+                    <img src="image/mixed.png" alt="An image of a cloud" width="50" height="50">
+                }
+                @if(card.Description.Contains("cloudy")||card.Description.Contains("Cloudy")){
+                    <img src="image/cloudy.png" alt="An image of a cloud" width="50" height="50">
+                }
+                @if(card.Description.Contains("clear")||card.Description.Contains("Clear")){
+                    <img src="image/sun.png" alt="An image of a cloud" width="50" height="50">
+                }
+            </div>
+        }
+        }
+
+        <form method="post">
+            <label for="Location">Please pick a location:</label>
+            <select name="Location" id="Location">
+                <option value="New Baltimore">New Baltimore</option>
+                <option value="Detroit">Detroit</option>
+                <option value="Royal Oak">Royal Oak</option>
+                <option value="Ferndale">Ferndale</option>
+                <option value="Ann Arbor">Ann Arbor</option>
+                <option value="Lansing">Lansing</option>
+                <option value="Houghton">Houghton</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        @if (!string.IsNullOrEmpty(Model.ResponseMessage)){
+            <h2>@Model.ResponseMessage</h2>
+        }
+    </div>
+    </div>
+    <img src="smile.png" alt="Give yourself a smile!" width="50" height="50">
+
+</body>
