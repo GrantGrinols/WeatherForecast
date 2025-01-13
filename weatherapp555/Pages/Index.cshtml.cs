@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using System.Linq.Expressions;
+using System.Diagnostics;
 
 namespace weatherapp555.Pages;
 
@@ -18,52 +19,71 @@ public class IndexModel : PageModel
     [BindProperty]
     public required string Location {get; set;}
     public required string ResponseMessage {get; set;}
+    [BindProperty]
+    public bool hasAddress {get; set;}
+    [BindProperty]
+    public required string userAddress {get; set;}
     private string XCoords = "";
     private string YCoords = "";
     public required string APIkey;
-
+    public required string GoogleKey;
+    
 
     
 
     public async Task OnGet()
     {
-
-        try{
-            using (StreamReader r = new StreamReader("urlcode.json")){
-                string json = r.ReadToEnd();
-
-                dynamic key = JsonConvert.DeserializeObject(json);
-                
-                APIkey=key["urlcode"];
-                
-            
-            }
-            
-        }
-        catch(Exception ex){
-            Console.WriteLine($"Something went wrong: {ex.Message}");
-        }
+        StartUp();
         Location = "New Baltimore";
-        await GetWeather(Location);
+        await GetWeather();
+
 
 
 
 
     }
     public async Task OnPost(){
-
+        StartUp();
+        if(!hasAddress){
         if(!string.IsNullOrEmpty(Location)){
-        await GetWeather(Location);
+        await GetWeather();
             
         }
+        }else{
+            Location = userAddress;
+            await CoordsGivenAddressFinder(userAddress);
+            await GetWeather();
+        }
     }
+    private void StartUp(){
+         try{
+            using (StreamReader r = new StreamReader("urlcode.json")){
+                string json = r.ReadToEnd();
 
-    private async Task GetWeather(string location){
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+                dynamic key = JsonConvert.DeserializeObject(json);
+
+
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+                APIkey =key["urlcode"];
+                GoogleKey = key["googleapi"];
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.                
+
+            }
+            
+        }
+        catch(Exception ex){
+            Console.WriteLine($"Something went wrong: {ex.Message}");
+        }   
+    }
+    private async Task GetWeather(){
+        
         CoordinateFinder();
         var client = new HttpClient();
-
+        Console.WriteLine($"This is a test for {XCoords} and {YCoords}");
         var request = new HttpRequestMessage(HttpMethod.Get, "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+XCoords+","+YCoords+"?key="+APIkey);
-
+        Console.WriteLine("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+XCoords+","+YCoords+"?key="+APIkey);
         var response = await client.SendAsync(request);
         
         response.EnsureSuccessStatusCode();
@@ -117,4 +137,19 @@ public class IndexModel : PageModel
             YCoords="-88.5660664";
         }
     }
+    public async Task CoordsGivenAddressFinder(string address){
+
+        var locationService = new GoogleLocationServiceWrapper(GoogleKey);
+        var latLong = new AddressFetcher(locationService);
+
+        var Coordinates = await latLong.FetchAddressAsync(address);
+
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+    
+        XCoords = Coordinates[0].ToString();
+        YCoords = Coordinates[1].ToString();
+        
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+    
+    } 
 }

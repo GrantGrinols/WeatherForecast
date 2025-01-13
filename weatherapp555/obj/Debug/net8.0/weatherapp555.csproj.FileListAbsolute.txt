@@ -1,5 +1,6 @@
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\appsettings.Development.json
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\appsettings.json
+c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\urlcode.json
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\weatherapp555.staticwebassets.runtime.json
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\weatherapp555.exe
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\weatherapp555.deps.json
@@ -15,6 +16,7 @@ c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debu
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.MvcApplicationPartsAssemblyInfo.cache
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.RazorAssemblyInfo.cache
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.RazorAssemblyInfo.cs
+c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.sourcelink.json
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\staticwebassets.build.json
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\staticwebassets.development.json
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\staticwebassets\msbuild.weatherapp555.Microsoft.AspNetCore.StaticWebAssets.props
@@ -31,5 +33,4 @@ c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debu
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.pdb
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.genruntimeconfig.cache
 c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\ref\weatherapp555.dll
-c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\obj\Debug\net8.0\weatherapp555.sourcelink.json
-c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\urlcode.json
+c:\Users\Apex Gaming PCs\Documents\GitHub\WeatherForecast\weatherapp555\bin\Debug\net8.0\GoogleMaps.LocationServices.dll

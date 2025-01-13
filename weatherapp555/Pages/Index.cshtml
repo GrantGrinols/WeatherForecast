@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="~/css/user.css" type="text/css"/>
 
 </head><body>
-    <div class="TransBackground WelcomeText">Welcome to your Weather forecast for Michigan</div>
+    <div class="TransBackground WelcomeText">Welcome to your weather forecast for Michigan<br><div style="font-size: 10px;">...And anywhere else!</div></div>
     <div class="TransBackground WelcomeText">Here is your local broadcast for @Model.Location
        
         <div style="display:flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
@@ -41,9 +41,10 @@
             </div>
         }
         }
-
+        <div class="TransBackground">
+            <div class="pagecontainer active" id="container1">
         <form method="post">
-            <label for="Location">Please pick a location:</label>
+            <label for="Location" style="font-size: 14px;">Please pick a location:</label>
             <select name="Location" id="Location">
                 <option value="New Baltimore">New Baltimore</option>
                 <option value="Detroit">Detroit</option>
@@ -52,14 +53,30 @@
                 <option value="Ann Arbor">Ann Arbor</option>
                 <option value="Lansing">Lansing</option>
                 <option value="Houghton">Houghton</option>
+                
             </select>
+            <input type="hidden" value="false" id="hasAddress" name="hasAddress">
             <button type="submit">Submit</button>
         </form>
+        </div>
+        <div class="pagecontainer" id="container2">
+            <form method="post">
+             <input type="text" id="userAddress" name="userAddress" placeholder="Please enter your address">
+            <button type="submit">Submit</button>
+            <input type="hidden" value="true" id="hasAddress" name="hasAddress">
+            </form>
+        </div>
+        <p></p>
+        <button onclick="showContainer('container1')">Best spots in Michigan</button><button onclick="showContainer('container2')">Manually enter an address</button>
+        
         @if (!string.IsNullOrEmpty(Model.ResponseMessage)){
             <h2>@Model.ResponseMessage</h2>
         }
     </div>
     </div>
-    <img src="smile.png" alt="Give yourself a smile!" width="50" height="50">
+    </div>
+    
+
+<script src="~/js/site.js"></script>
 
 </body>

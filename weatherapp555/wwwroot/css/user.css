@@ -20,3 +20,9 @@ text-align: center;
     border-color: purple;
     border-width: 2px;
 }
+.pagecontainer {
+    display: none;
+}
+.active {
+    display: block;
+}

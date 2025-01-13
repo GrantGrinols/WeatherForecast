@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {}
+    "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {
+    "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
+        "projectUniqueName": "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
         "projectName": "weatherapp555",
-        "projectPath": "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
+        "projectPath": "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
         "packagesPath": "C:\\Users\\Apex Gaming PCs\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\obj\\",
+        "outputPath": "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Apex Gaming PCs\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "GoogleMaps.LocationServices": {
+              "target": "Package",
+              "version": "[1.2.0.5, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
