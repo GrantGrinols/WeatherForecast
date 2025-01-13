@@ -1,14 +1,8 @@
-using System.Text.Json;
-using System.IO;
-using System;
-using System.Collections.Generic;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
-using System.Linq.Expressions;
-using System.Diagnostics;
+
 
 namespace weatherapp555.Pages;
 
