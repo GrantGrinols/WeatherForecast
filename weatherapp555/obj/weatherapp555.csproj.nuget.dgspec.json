@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {}
+    "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {
+    "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
+        "projectUniqueName": "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
         "projectName": "weatherapp555",
-        "projectPath": "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
+        "projectPath": "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\weatherapp555.csproj",
         "packagesPath": "C:\\Users\\Apex Gaming PCs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\obj\\",
+        "outputPath": "c:\\Users\\Apex Gaming PCs\\Documents\\GitHub\\WeatherForecast\\weatherapp555\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Apex Gaming PCs\\AppData\\Roaming\\NuGet\\NuGet.Config"

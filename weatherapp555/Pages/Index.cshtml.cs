@@ -76,6 +76,12 @@ public class IndexModel : PageModel
         CoordinateFinder();
         var client = new HttpClient();
         Console.WriteLine($"This is a test for {XCoords} and {YCoords}");
+        if(XCoords.Equals("0")&&YCoords.Equals("0")){
+            Location = "Invalid";
+            return;
+        }
+
+        
         var request = new HttpRequestMessage(HttpMethod.Get, "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+XCoords+","+YCoords+"?key="+APIkey);
         Console.WriteLine("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+XCoords+","+YCoords+"?key="+APIkey);
         var response = await client.SendAsync(request);
